@@ -1,0 +1,21 @@
+{
+    // devcontainer を作るのにつかう　Dockerfile
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+  
+  
+    // Add the IDs of extensions you want installed when the container is created.
+    // "extensions": [
+    //     "vscjava.vscode-java-pack",
+    //     "Open-Liberty.liberty-dev-vscode-ext"
+    // ],
+
+    "forwardPorts": [9080, 9443],
+    
+    // prebuild
+//   "onCreateCommand": "cd /workspaces/drobe && sh script/codespace/prebuilt.sh", // 後で説明する prebuild される時に実行されるコマンド
+  
+    // post build
+    "postCreateCommand": "chmod -R 777 ." // devcontainer が作られた後に実行されるコマンド
+  }
