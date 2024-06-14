@@ -1,0 +1,15 @@
+{
+    // devcontainer を作るのにつかう　Dockerfile
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+  
+    "extensions": [
+        "vscjava.vscode-java-pack",
+        "Open-Liberty.liberty-dev-vscode-ext"
+    ],
+
+    "forwardPorts": [9080, 9443],
+    
+    "postCreateCommand": "chmod -R 777 ." // devcontainer が作られた後に実行されるコマンド
+  }
